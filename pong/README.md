@@ -1,5 +1,5 @@
 # Pong
 
 **requirements**:
-- python:3
-- pip:10
+- python: 3
+- pip

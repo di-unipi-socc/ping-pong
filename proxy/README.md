@@ -1,7 +1,7 @@
 # Proxy
 
 **requirements**:
-- go:1.8
+- go: 1.8
 
 ## Getting Started
 

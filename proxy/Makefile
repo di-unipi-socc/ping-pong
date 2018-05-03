@@ -1,7 +1,5 @@
 PACKAGES=$(shell go list ./... | grep -v /vendor/)
 RACE := $(shell test $$(go env GOARCH) != "amd64" || (echo "-race"))
-NAME=proxy
-FILES=$(shell ls ./ | grep -vE "bin|dist")
 
 help:
 	@echo 'Available commands:'
@@ -11,7 +9,6 @@ help:
 	@echo '    make build    		Compile the project.'
 	@echo '    make restore  		Restore all dependencies.'
 	@echo '    make clean    		Clean the directory tree.'
-	@echo '    make package			Build package.'
 	@echo
 
 test: ## run tests, except integration tests
@@ -34,15 +31,5 @@ ci: vet test
 restore:
 	@dep ensure
 
-package:
-	@echo 'build archive..'
-	@mkdir -p .tmp/${NAME}
-	@mkdir -p dist
-	@cp -R ${FILES} .tmp/${NAME}
-	@cd .tmp && tar -vcf ../dist/${NAME}.tar ${NAME}
-	@rm -fr .tmp
-	@echo 'done.'
-
 clean:
-	@rm -frv dist bin
-
+	@rm -frv bin

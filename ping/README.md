@@ -1,5 +1,5 @@
 # Ping
 
 **requirements**:
-- node:8
-- npm:5
+- node: 8
+- npm: 5

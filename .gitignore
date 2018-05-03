@@ -1,6 +1,5 @@
 # Build
 dist/
-*.tar
 
 # Nodejs
 node_modules/

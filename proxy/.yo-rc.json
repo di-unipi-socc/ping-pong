@@ -1,8 +1,0 @@
-{
-  "generator-go-lang": {
-    "promptValues": {
-      "app": "proxy",
-      "vendor": false
-    }
-  }
-}
