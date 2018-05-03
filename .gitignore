@@ -1,0 +1,20 @@
+# Build
+dist/
+*.tar
+
+# Nodejs
+node_modules/
+
+# Python
+venv
+*.pyc
+
+# Go
+bin/
+pkg/
+vendor/
+debug/
+
+# vscode
+.vscode/
+
